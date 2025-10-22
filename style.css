@@ -123,6 +123,7 @@ main .container {
 .right h1 {
     margin: 50px 0 0;
 }
+.right h3,
 .right h5 {
     margin: 0;
 }
@@ -152,4 +153,12 @@ main .container {
 }
 .center img {
     width: 364px;
+}
+.center .container .left {
+    flex-direction: column;
+    display: flex;
+}
+.center .container .left p {
+    font-size: 12px;
+    margin: 0;
 }
