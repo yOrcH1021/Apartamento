@@ -1,12 +1,13 @@
-html, body {
+html,
+body {
     width: 100%;
     margin: 0;
 }
 
 * {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /* SCROLL */
@@ -41,10 +42,18 @@ html, body {
 }
 
 /* HEADING */
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
     font-weight: 300;
     zoom: 1.51;
 }
+
 h1 {
     line-height: 30px;
 }
@@ -53,27 +62,35 @@ h1 {
 .font-100 {
     font-weight: 100;
 }
+
 .font-200 {
     font-weight: 200;
 }
+
 .font-300 {
     font-weight: 300;
 }
+
 .font-400 {
     font-weight: 400;
 }
+
 .font-500 {
     font-weight: 500;
 }
+
 .font-600 {
     font-weight: 600;
 }
+
 .font-700 {
     font-weight: 700;
 }
+
 .font-800 {
     font-weight: 800;
 }
+
 .font-900 {
     font-weight: 900;
 }
@@ -82,12 +99,15 @@ h1 {
 .white-txt {
     color: #ffffff;
 }
+
 .white-bg {
     background: #ffffff;
 }
+
 .blue-txt {
     color: #324158;
 }
+
 .blue-bg {
     background: #324158;
 }
@@ -96,6 +116,7 @@ h1 {
 .w-100 {
     width: 100%;
 }
+
 .h-100 {
     height: 100%;
 }
@@ -105,20 +126,24 @@ h1 {
     font-size: 40px;
     zoom: 1;
 }
+
 .arrow_circle_down {
     position: fixed;
     left: 30px;
     top: 30px;
 }
+
 .arrow_circle_left,
 .arrow_circle_right {
     position: absolute;
     margin-top: -20px;
     top: 50%;
 }
+
 .arrow_circle_left {
     left: 30px;
 }
+
 .arrow_circle_right {
     position: absolute;
     right: 30px;
@@ -128,10 +153,12 @@ h1 {
 main {
     padding-top: 100px;
 }
+
 main .container {
     justify-content: space-between;
     display: flex;
 }
+
 .left,
 .right {
     display: flex;
@@ -140,22 +167,27 @@ main .container {
 .left {
     min-width: 596px;
 }
+
 .right {
     min-width: 364px;
     flex-direction: column;
 }
+
 .right h1 {
     margin: 50px 0 0;
 }
+
 .right h3,
 .right h5 {
     margin: 0;
 }
+
 .right h6 {
     text-align: center;
     font-weight: 300;
     margin: 10px 0;
 }
+
 .right img {
     margin-top: 32px;
     width: 364px;
@@ -166,29 +198,40 @@ main .container {
     padding: 32px 0;
     margin: 32px 0;
 }
-.center .container > div {
+
+.center .container>div {
     display: flex;
     overflow: auto;
 }
-.center .container > div * {
+
+.center .container>div a {
+    display: flex;
+}
+
+.center .container>div * {
     margin-right: 32px;
 }
-.center .container > div *:last-child {
+
+.center .container>div *:last-child {
     margin: 0;
 }
+
 .center img {
     width: 364px;
     height: fit-content;
 }
+
 .center .container .left {
     flex-direction: column;
     display: flex;
 }
+
 .center .container .left p {
     font-size: 12px;
     margin: 0;
 }
-.center .container .left p + p {
+
+.center .container .left p+p {
     margin-top: 8px;
 }
 
@@ -198,19 +241,125 @@ footer .container div {
     align-items: center;
     display: flex;
 }
+
 footer {
     margin-bottom: 50px;
 }
+
 footer p {
     margin: 0;
 }
+
 footer h2 {
     text-align: center;
 }
+
 footer span {
     margin: 0 5px;
 }
+
 footer img {
     width: 36px;
     margin-right: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.modal:target {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido {
+    background: white;
+    text-align: center;
+    position: relative;
+    padding: 32px;
+    width: 55vw;
+}
+
+.close {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+}
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+    /* HEADING */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+        font-weight: 300;
+        zoom: 1.25;
+    }
+    .right {
+        min-width: auto;
+    }
+    .right img {
+        margin-top: 16px;
+    }
+    .arrow_circle_down {
+        left: auto;
+        right: 32px;
+        top: 140px;
+    }
+    main {
+        padding-top: 0;
+    }
+    main .container .left {
+        display: none;
+    }
+    main .container .right,
+    main .container .right img {
+        width: 100%;
+    }
+    .center {
+        display: contents;
+        margin: 16px 0;
+    }
+    .center .left {
+        background: #324158;
+        margin: 0 !important;
+        position: relative;
+        min-width: auto;
+    }
+    .center .container {
+        background: #324158;
+        margin: 16px 0;
+        padding: 16px;
+    }
+    .center .container > div {
+        overflow: hidden;
+        display: block;
+    }
+    .center .container > div a {
+        margin: 16px 0 0 !important;
+        pointer-events: none;
+    }
+    .center span {
+        display: none !important;
+    }
+    .center img {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
