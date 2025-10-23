@@ -13,8 +13,8 @@ body {
 /* SCROLL */
 /* Width of the entire scrollbar */
 ::-webkit-scrollbar {
-    height: 0;
-    width: 0;
+    height: 5px;
+    width: 5px;
 }
 
 /* Background of the scrollbar track */
@@ -25,12 +25,12 @@ body {
 /* Scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: gray;
+    background: #dcdcdc;
 }
 
 /* Scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #7f8a9c;
 }
 
 /* CONTAINER */
@@ -195,7 +195,7 @@ main .container {
 
 .center {
     position: relative;
-    padding: 32px 0;
+    padding: 32px 0 27px;
     margin: 32px 0;
 }
 
