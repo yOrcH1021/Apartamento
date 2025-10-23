@@ -9,12 +9,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
+        <span class="material-symbols-outlined arrow_circle_down blue-txt">arrow_circle_down</span>
         <div class="container">
             <div class="left">
                 <img class="w-100" src="img/main.jpg" alt="">
@@ -38,20 +40,20 @@
             </div>
         </div>
         <div class="center blue-bg">
+            <span class="material-symbols-outlined arrow_circle_left white-txt" id="icon-left"
+                style="display: none;">arrow_circle_left</span>
+            <span class="material-symbols-outlined arrow_circle_right white-txt"
+                id="icon-right">arrow_circle_right</span>
             <div class="container">
-                <div>
+                <div id="contenedor-scroll">
                     <div class="left">
-                        <p class="white-txt"></p>
-                        <p class="white-txt">Área: 42 m², 2 habitaciones + 1 opcional | 1 baño de lujo</p>
-                        <p class="white-txt">Cocina semi integral con mesón en cuarzo y división de ducha en vidrio templado.</p>
-                        <br>
-                        <p class="white-txt">Disfruta de una gran vista a las montañas, al centro comercial y a la Hacienda La Chucuita.</p>
-                        <p class="white-txt">El conjunto ofrece zona verde, parque infantil, salón comunal, parqueadero comunal (por sorteo) y vigilancia 24 horas.</p>
-                        <br>
-                        <p class="white-txt">Excelente ubicación, cerca de transporte público, colegios y centros comerciales.</p>
-                        <!-- <p class="white-txt">💰 Precio negociable</p>
-                        <p class="white-txt">📞 Contáctame para más información o agendar una visita.</p>
-                        <p class="white-txt">¡Listo para habitar!</p> -->
+                        <p class="white-txt">¡Tu nuevo hogar te espera!</p>
+                        <p class="white-txt">Acogedor apartamento en Ciudad Verde - Conjunto Clavel 1, de 42 m², con 2
+                            habitaciones + 1 opcional, baño de lujo y cocina semi integral con mesón en cuarzo. Disfruta
+                            de una hermosa vista a las montañas y al centro comercial, en un entorno tranquilo con zonas
+                            verdes, parque infantil, salón comunal y vigilancia 24 h. Excelente ubicación, cerca de
+                            transporte, colegios y comercios. ¡ideal para vivir o invertir!</p>
+                        <p class="white-txt">Listo para habitar</p>
                     </div>
                     <img src="img/4.jpg" alt="">
                     <img src="img/5.jpg" alt="">
@@ -62,13 +64,50 @@
                     <img src="img/10.jpg" alt="">
                     <img src="img/11.jpg" alt="">
                     <img src="img/12.jpg" alt="">
+                    <img src="img/13.jpg" alt="">
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="container"></div>
+        <div class="container">
+            <h2 class="blue-txt">*Precio negociable</h2>
+            <div>
+                <p class="blue-txt">Para</p>
+                <span class="material-symbols-outlined">add_circle</span>
+                <p class="blue-txt">Información</p>
+            </div>
+            <div>
+                <img src="img/wp.jpg" alt="">
+                <p class="blue-txt">3124584468</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const contenedor = document.getElementById('contenedor-scroll');
+        const iconoLeft = document.getElementById('icon-left');
+        const iconoRight = document.getElementById('icon-right');
+
+        contenedor.addEventListener('scroll', () => {
+            if (contenedor.scrollLeft > 0) {
+                iconoLeft.style.display = 'block';
+                iconoRight.style.display = 'none';
+            } else {
+                iconoLeft.style.display = 'none';
+                iconoRight.style.display = 'block';
+            }
+        });
+
+        // Lógica para el icono que desaparece al llegar al final
+        const isEnd = (scrollContainer.scrollLeft + scrollContainer.clientWidth) >= scrollContainer.scrollWidth;
+        if (isEnd) {
+            scrollLeftIcon.classList.add('hidden');
+        } else {
+            scrollLeftIcon.classList.remove('hidden');
+        }
+    </script>
+
 </body>
 
 </html>

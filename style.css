@@ -12,8 +12,8 @@ html, body {
 /* SCROLL */
 /* Width of the entire scrollbar */
 ::-webkit-scrollbar {
-    height: 5px;
-    width: 5px;
+    height: 0;
+    width: 0;
 }
 
 /* Background of the scrollbar track */
@@ -100,6 +100,30 @@ h1 {
     height: 100%;
 }
 
+/* ICONS */
+.material-symbols-outlined {
+    font-size: 40px;
+    zoom: 1;
+}
+.arrow_circle_down {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+}
+.arrow_circle_left,
+.arrow_circle_right {
+    position: absolute;
+    margin-top: -20px;
+    top: 50%;
+}
+.arrow_circle_left {
+    left: 30px;
+}
+.arrow_circle_right {
+    position: absolute;
+    right: 30px;
+}
+
 /* MAIN */
 main {
     padding-top: 100px;
@@ -138,6 +162,7 @@ main .container {
 }
 
 .center {
+    position: relative;
     padding: 32px 0;
     margin: 32px 0;
 }
@@ -153,6 +178,7 @@ main .container {
 }
 .center img {
     width: 364px;
+    height: fit-content;
 }
 .center .container .left {
     flex-direction: column;
@@ -161,4 +187,30 @@ main .container {
 .center .container .left p {
     font-size: 12px;
     margin: 0;
+}
+.center .container .left p + p {
+    margin-top: 8px;
+}
+
+/* FOOTER */
+footer .container div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+footer {
+    margin-bottom: 50px;
+}
+footer p {
+    margin: 0;
+}
+footer h2 {
+    text-align: center;
+}
+footer span {
+    margin: 0 5px;
+}
+footer img {
+    width: 36px;
+    margin-right: 5px;
 }
